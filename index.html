@@ -51,10 +51,87 @@
     height: 1px;
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
-}
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    /* Caption of Modal Image */
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /* Add Animation */
+    .modal-content, #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)}
+        to {-webkit-transform:scale(1)}
+    }
+
+    @keyframes zoom {
+        from {transform:scale(0)}
+        to {transform:scale(1)}
+    }
+
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+        .modal-content {
+            width: 100%;
+        }
+    }
   </style>
 </head>
-
 <body>
   <!--==========================Hero Section ============================-->
   <section id="hero">
@@ -88,8 +165,8 @@
           <li><a href="#about">Sobre</a></li>
           <li ><a href="#services">Modalidades</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Equipe</a></li>
           <li><a href="#testimonials">Horários</a></li>
+          <li><a href="#team">Equipe</a></li>
           <li ><a href="#contact">Contate-nos</a></li>
         </ul>
       </nav>
@@ -194,7 +271,7 @@
             benefício de emagrecimento o Jazz também proporciona desenvolvimento
             da coordenação motora, fexibilidade, resistência física, fortalecimento
             da musculatura modelando o corpo, musicalidade, agilidade e rapidez de
-            raciocínio.
+            raciocínio..
           </p>
         </div>
       </div>
@@ -252,66 +329,6 @@
               <span>Palco tal...</span>
             </div>
           </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--==========================Team Section============================-->
-  <section id="team">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="section-title">Nossa Equipe</h3>
-          <div class="section-title-divider"></div>
-          <p class="section-description">Temos professores experientes para guiá-lo em sua modalidade.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <!--<div class="col-md-1">-->
-        <!--</div>-->
-        <div class="col-md-4">
-          <div class="member">
-            <div class="pic"><img src="img/renata.jpeg" alt="">
-            </div>
-            <h4>Renata Della Enns</h4>
-            <span>Diretora e Professora</span>
-            <div class="social">
-              <a href=""><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/renata.enns" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a href=""><i class="fa fa-google-plus"></i></a>
-              <a href=""><i class="fa fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member">
-            <div class="pic"><img src="img/ana.jpg" alt="">
-            </div>
-            <h4>Ana Clara dos Santos</h4>
-            <span>Hip Hop</span>
-            <div class="social">
-              <!--<a href=""><i class="fa fa-twitter"></i></a>-->
-              <a href="https://www.facebook.com/ana.barcellos.8" target="_blank"><i class="fa fa-facebook"></i></a>
-              <!--<a href=""><i class="fa fa-google-plus"></i></a>-->
-              <a href=""><i class="fa fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member">
-            <div class="pic"><img src="img/thaynna.jpeg" alt="">
-            </div>
-            <h4>Thaynna Viski</h4>
-            <span>Jazz e Ballet Clássico</span>
-            <div class="social">
-              <a href="https://twitter.com/_thayviski?lang=pt" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/thaynna.viski" target="_blank"><i class="fa fa-facebook"></i></a>
-              <!--<a href=""><i class="fa fa-google-plus"></i></a>-->
-              <a href=""><i class="fa fa-linkedin"></i></a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -448,6 +465,68 @@
       </div>
     </div>
   </section>
+
+
+    <!--==========================Team Section============================-->
+    <section id="team">
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="section-title">Nossa Equipe</h3>
+            <div class="section-title-divider"></div>
+            <p class="section-description">Temos professores experientes para guiá-lo em sua modalidade.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <!--<div class="col-md-1">-->
+          <!--</div>-->
+          <div class="col-md-4">
+            <div class="member">
+              <div class="pic"><img src="img/renata.jpeg" alt="">
+              </div>
+              <h4>Renata Della Enns</h4>
+              <span>Diretora e Professora</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/renata.enns" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="member">
+              <div class="pic"><img src="img/ana.jpg" alt="">
+              </div>
+              <h4>Ana Clara dos Santos</h4>
+              <span>Hip Hop</span>
+              <div class="social">
+                <!--<a href=""><i class="fa fa-twitter"></i></a>-->
+                <a href="https://www.facebook.com/ana.barcellos.8" target="_blank"><i class="fa fa-facebook"></i></a>
+                <!--<a href=""><i class="fa fa-google-plus"></i></a>-->
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="member">
+              <div class="pic"><img src="img/thaynna.jpeg" alt="">
+              </div>
+              <h4>Thaynna Viski</h4>
+              <span>Jazz e Ballet Clássico</span>
+              <div class="social">
+                <a href="https://twitter.com/_thayviski?lang=pt" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/thaynna.viski" target="_blank"><i class="fa fa-facebook"></i></a>
+                <!--<a href=""><i class="fa fa-google-plus"></i></a>-->
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
      <!--==========================Subscrbe Section============================-->
 
