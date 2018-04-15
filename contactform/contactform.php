@@ -4,7 +4,7 @@ $email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 $formcontent=" From: $name \n Message: $message";
-$recipient = "cristian_frod@hotmail.com";
+$recipient = "contato@delladanca.com.br";
 $subject = "Contact Form";
 $mailheader = "From: $email \r\n";
 // create email headers
